@@ -1,4 +1,4 @@
-import conversor.herramientas.conversor;
+import conversor.herramientas.Conversor;
 
 import java.util.Scanner;
 
@@ -10,10 +10,12 @@ public class Main {
 
         double moneda;
 
-        do {
-            System.out.println("\nBienvenido al conversor de monedas ;)");
+        System.out.println("\nBienvenido al conversor de monedas ;)");
 
-            System.out.println("""
+        do {
+
+            try {
+                System.out.println("""
             ====================================
                  Elegí tu tipo de cambio
             ====================================
@@ -30,19 +32,24 @@ public class Main {
             ====================================
             """);
 
-            eleccionCambio = scanner.nextInt();
+                eleccionCambio = scanner.nextInt();
 
-            if (eleccionCambio == 7){
-                break;
+                if (eleccionCambio == 7){
+                    break;
+                }
+
+                System.out.println("Ingrese el valor que desea convertir");
+
+                moneda = scanner.nextDouble();
+
+                Conversor conversorF = new Conversor();
+
+                conversorF.conversionFinal(eleccionCambio, moneda);
+
+            } catch (Exception e) {
+                System.out.println("Entrada inválida. Intente nuevamente.");
+                scanner.nextLine();
             }
-
-            System.out.println("Ingrese el valor que desea convertir");
-
-            moneda = scanner.nextDouble();
-
-            conversor conversorF = new conversor();
-
-            conversorF.conversionFinal(eleccionCambio, moneda);
 
         }while(true);
 

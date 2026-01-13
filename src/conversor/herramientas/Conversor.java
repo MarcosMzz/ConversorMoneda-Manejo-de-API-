@@ -1,6 +1,6 @@
 package conversor.herramientas;
 
-public class conversor {
+public class Conversor {
 
     public void conversionFinal(int pEleccion, double pCantidadMoneda){
         servicioApi conversion = new servicioApi();
