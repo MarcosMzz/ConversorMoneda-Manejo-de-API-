@@ -6,9 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int eleccionCambio = 0;
+        int eleccionCambio;
 
-        double moneda = 0;
+        double moneda;
 
         do {
             System.out.println("\nBienvenido al conversor de monedas ;)");
