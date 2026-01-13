@@ -3,7 +3,7 @@ package conversor.herramientas;
 public class Conversor {
 
     public void conversionFinal(int pEleccion, double pCantidadMoneda){
-        servicioApi conversion = new servicioApi();
+        ServicioApi conversion = new ServicioApi();
 
         double exRateSelected = 0;
 

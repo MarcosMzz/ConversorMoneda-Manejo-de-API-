@@ -8,7 +8,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class servicioApi {
+public class ServicioApi {
 
     public double obtenerConversion(String pMonedaInicial, String pMonedaFinal){
 
@@ -31,7 +31,7 @@ public class servicioApi {
 
             String json = response.body();
 
-            ratioExchangeApi rExchange = gson.fromJson(json, ratioExchangeApi.class);
+            RatioExchangeApi rExchange = gson.fromJson(json, RatioExchangeApi.class);
 
             double exchangeRatio = rExchange.conversion_rate();
 
