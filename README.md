@@ -1,6 +1,6 @@
 # 💱 Conversor de Monedas en Java
 
-Proyecto de **conversor de monedas** desarrollado en **Java**, como parte de un desafío de un curso de programación.  
+Proyecto de **conversor de monedas** desarrollado en **Java**.  
 El programa permite realizar conversiones entre distintas monedas utilizando una **API externa de tasas de cambio en tiempo real**.
 
 ---
@@ -31,12 +31,15 @@ El programa permite realizar conversiones entre distintas monedas utilizando una
 
 ## 📂 Estructura del proyecto
 
+```text
 src/
 ├── Main.java
-└── conversor.herramientas/
-├── Conversor.java
-├── RatioExchangeApi.java
-└── ServicioApi.java
+└── conversor/
+    └── herramientas/
+        ├── Conversor.java
+        ├── RatioExchangeApi.java
+        └── ServicioApi.java
+```
 
 
 - `Main.java`  
