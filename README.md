@@ -60,7 +60,7 @@ src/
 
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/MarcosMzz/ConversorMonedas.git
+   git clone https://github.com/MarcosMzz/ConversorMoneda-Manejo-de-API-.git
 2. Abrir el proyecto en IntelliJ IDEA (u otro IDE compatible)
 
 3. Ejecutar la clase Main
