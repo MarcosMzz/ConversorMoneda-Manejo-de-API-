@@ -1,8 +1,10 @@
 package conversor.herramientas;
 
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.ObjectInputFilter;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -12,12 +14,14 @@ public class ServicioApi {
 
     public double obtenerConversion(String pMonedaInicial, String pMonedaFinal){
 
+        String apiKey = AppConfig.getApiKey();
+
         Gson gson = new GsonBuilder()
                 .setPrettyPrinting()
                 .create();
 
         try {
-            String direccion = "https://v6.exchangerate-api.com/v6/1c637b3d90f17acf5cbbbf36/pair/"+pMonedaInicial+"/"+pMonedaFinal;
+            String direccion = "https://v6.exchangerate-api.com/v6/" +  apiKey + "/pair/"+pMonedaInicial+"/"+pMonedaFinal;
 
             HttpClient client = HttpClient.newHttpClient();
 
